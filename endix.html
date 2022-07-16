@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="titl"></h1>
+
+    <table id="table">
+        <tr>
+            <th>Number</th>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Attendance</th>
+        </tr>
+        <tr id="r1">
+            <td>1</td>
+            <td>12345</td>
+            <td>JOHAN DONE</td>
+
+            <td>
+                <div class="buttons">
+                    <button id="bt1" onclick="changeMe1('1','bt1','bt2','bt3')">&#9989;</button>
+                    <button id="bt2" onclick="changeMe2('1','bt1','bt2','bt3')">&#128683;</button>
+                    <button id="bt3" onclick="changeMe3('1','bt1','bt2','bt3')">&#128337;</button>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr id="r2"{const index=2}>
+            <td>2</td>
+            <td>12345</td>
+            <td>JOHAN DONE</td>
+
+            <td>
+                <div class="buttons">
+                    <button  id="bt11" onclick="changeMe1('2','bt11','bt12','bt13')">&#9989;</button>
+                    <button  id="bt12" onclick="changeMe2('2','bt11','bt12','bt13')" >&#128683;</button>
+                    <button  id="bt13" onclick="changeMe3('2','bt11','bt12','bt13')" >&#128337;</button>
+                </div>
+            </td>
+        </tr>
+        <tr id="r3">
+            <td>3</td>
+            <td>12345</td>
+            <td>JOHAN DONE</td>
+
+            <td>
+                <div class="buttons">
+                    <button id="bt21" onclick="changeMe1('3','bt21','bt22','bt23')">&#9989;</button>
+                    <button id="bt22" onclick="changeMe2('3','bt21','bt22','bt23')">&#128683;</button>
+                    <button id="bt23" onclick="changeMe3('3','bt21','bt22','bt23')">&#128337;</button>
+                </div>
+            </td>
+        </tr>
+        <tr id="myrow"></tr>
+
+
+        <tr>
+            <td id="Statistics" colspan="3">Statistics</td>
+            <td>
+                <div class="summation">
+                    <span id="count-1">0</span>
+                    <span id="count-2">0</span>
+                    <span id="count-3">0</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+    <div class="end-buttons">
+        <button class="open-button" onclick="openForm()" id="addBtn">Add Students</button>
+        <button id="download" onclick="ExecelFile('table','members-data') ">Save</button>
+        <button onclick="cls()">Clear All</button>
+    </div>
+
+
+    <div class="biger" id="biger"></div>
+
+        <div class="form-popup" id="myForm">
+            <form action="" class="form-container" onsubmit="prevent()">
+                <form action="" method="post">
+                    <h2>Add new Student</h2>
+
+                    <table>
+
+                        <tr>
+                            <td>
+                                <label for="number">Student Number</label>
+                            </td>
+                            <td>
+                                <input type="number" id="number" min="1">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="fname">First name</label>
+                            </td>
+                            <td>
+                                <input type="text" id="fname">
+                            </td>
+                        </tr>
+
+                        <td>
+                            <label for="lname">last name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="lname">
+                        </td>
+                        </tr>
+                        <h4>Warning : Adding Student reset the sheet !</h4>
+
+                    </table>
+                    <div class="mybuttons">
+                        <button type="submit" class="btn" onclick="Add()">Save</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+</body>
+
+</html>
